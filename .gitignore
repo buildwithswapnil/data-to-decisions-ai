@@ -1,0 +1,30 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.streamlit/secrets.toml
+.env
+venv/
+*.db-journal
+*.db-shm
+*.db-wal
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Virtual environments and Python cache
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local databases and generated data
+*.db
+*.sqlite
+*.sqlite3
+
+# Local Streamlit configuration
+.streamlit/secrets.toml

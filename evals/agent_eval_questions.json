@@ -1,0 +1,40 @@
+[
+  {
+    "id": "readmission_medicare_high_risk_2023",
+    "question": "Compare readmission risk by diagnosis for Medicare high risk patients in 2023",
+    "expected_domain": "readmissions",
+    "expected_filters": [
+      "Insurance Type = Medicare",
+      "Admission year in 2023",
+      "Readmission risk score >= 0.8"
+    ],
+    "success_criteria": "Agent calls the analytics tool, returns non-zero records, groups by diagnosis, and mentions limitations."
+  },
+  {
+    "id": "diabetes_payer_breakdown",
+    "question": "Break down operational metrics by insurance type for diabetes patients",
+    "expected_domain": "readmissions",
+    "expected_filters": [
+      "Primary Diagnosis = Diabetes"
+    ],
+    "success_criteria": "Agent returns readmission metrics and explains payer mix or insurance segmentation."
+  },
+  {
+    "id": "copd_senior_high_risk",
+    "question": "Show patients aged 60 to 80 with COPD and high readmission risk",
+    "expected_domain": "readmissions",
+    "expected_filters": [
+      "Primary Diagnosis = COPD",
+      "Readmission risk score >= 0.8",
+      "Age between 60 and 80"
+    ],
+    "success_criteria": "Agent returns a filtered cohort with row evidence and next operational action."
+  },
+  {
+    "id": "unsupported_sports_query",
+    "question": "Who won the cricket match yesterday?",
+    "expected_domain": "unsupported",
+    "expected_filters": [],
+    "success_criteria": "Agent does not execute SQL and explains the healthcare domain guardrail."
+  }
+]
